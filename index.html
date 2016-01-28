@@ -1,0 +1,82 @@
+<!doctype html><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+
+<title>Panorama</title>
+
+<script src="./assets/three.js"></script>
+<script src="./assets/threestrap.js"></script>
+<script src="./assets/argon.js"></script>
+<script src="./assets/argon-three.js"></script>
+<!--<script src="./assets/jquery.js"></script>-->
+<!--<script src="./assets/three.js"></script>-->
+<!--<script src="./assets/OrbitControls.js"></script>-->
+<!--<script src="./assets/Detector.js"></script>-->
+<!--<script src="./assets/CanvasRenderer.js"></script>-->
+
+<style type="text/css">
+  html, body {
+    height: 100%;
+  }
+
+  body {
+    margin: 0;
+    font-family: Arial;
+    overflow: hidden;
+  }
+
+  a {
+    color: #ffffff;
+  }
+
+  #menu {
+    position: absolute;
+    bottom: 50px;
+    width: 100%;
+    text-align: center;
+  }
+
+  button {
+    color: rgba(127,255,255,0.75);
+    background: transparent;
+    outline: 1px solid rgba(127,255,255,0.75);
+    border: 0px;
+    padding: 5px 10px;
+    cursor: pointer;
+  }
+  button:hover {
+    background-color: rgba(0,255,255,0.5);
+  }
+  button:active {
+    color: #000000;
+    background-color: rgba(0,255,255,0.75);
+  }
+
+  iframe {
+    z-index: -1000;
+  }
+
+</style>
+<body>
+
+<div id="argon-immersive-context">
+  <div id="menu">
+    <button id="toggle_on">Add Cube</button>
+    <button id="toggle_off">Remove Cube</button>
+
+  </div>
+  <div>
+    <h2>Self created cube in a panorama</h2>
+
+    <p>This code uses takes an equirectangular projection panoramic image to create an Argon3 panorama.
+      The input image should have a 2-1 aspect ratio and should not be greater than 4000x2000 pixels.
+      This image is texture mapped onto the surface of a sphere surround the user/camera.
+      This code can be expanded to include other images and functionality for a fuller Argon3 experience.
+      Go to the site: http://ael.gatech.edu/argon for more details.</p>
+  </div>
+</div>
+</body>
+<script>
+  var imageFile = "creepy_room_pano.jpg";
+</script>
+<script src="./app.js"></script>
+</html>
